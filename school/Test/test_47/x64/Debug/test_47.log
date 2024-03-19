@@ -1,0 +1,3 @@
+﻿  main.cpp
+C:\Users\user\source\repos\test_47\main.cpp(6,6): warning C4101: 're' :참조되지 않은 지역 변수입니다.
+  test_47.vcxproj -> C:\Users\user\source\repos\test_47\x64\Debug\test_47.exe
