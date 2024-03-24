@@ -1,0 +1,4 @@
+﻿  main.cpp
+C:\Users\user\source\repos\test_57\main.cpp(5,17): warning C4305: '초기화 중': 'double'에서 'float'(으)로 잘립니다.
+C:\Users\user\source\repos\test_57\main.cpp(5,25): warning C4305: '초기화 중': 'double'에서 'float'(으)로 잘립니다.
+  test_57.vcxproj -> C:\Users\user\source\repos\test_57\x64\Debug\test_57.exe
