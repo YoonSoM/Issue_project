@@ -1,0 +1,6 @@
+﻿  main.cpp
+C:\Users\user\source\repos\test_60\main.cpp(6,6): warning C4101: 'class3' :참조되지 않은 지역 변수입니다.
+C:\Users\user\source\repos\test_60\main.cpp(5,6): warning C4101: 'class2' :참조되지 않은 지역 변수입니다.
+C:\Users\user\source\repos\test_60\main.cpp(7,6): warning C4101: 'class_3' :참조되지 않은 지역 변수입니다.
+C:\Users\user\source\repos\test_60\main.cpp(4,6): warning C4101: 'class1' :참조되지 않은 지역 변수입니다.
+  test_60.vcxproj -> C:\Users\user\source\repos\test_60\x64\Debug\test_60.exe
