@@ -1,0 +1,3 @@
+﻿  main.cpp
+C:\Users\user\source\repos\test_68\main.cpp(18,12): warning C4244: '=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  test_68.vcxproj -> C:\Users\user\source\repos\test_68\x64\Debug\test_68.exe
