@@ -1,0 +1,3 @@
+﻿  main.cpp
+C:\Users\user\source\repos\test_105\main.cpp(69,19): warning C4305: '인수': 'double'에서 'float'(으)로 잘립니다.
+  test_105.vcxproj -> C:\Users\user\source\repos\test_105\x64\Debug\test_105.exe
