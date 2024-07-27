@@ -1,0 +1,55 @@
+CREATE (a:STUDENT { 성명 : "이몽룡", 학년 : "4학년", 학과 : "컴퓨터공학과"}) RETURN a
+CREATE (:STUDENT { 성명 : "성춘향", 학년 : "3학년", 학과 : "컴퓨터공학과"})
+CREATE (:STUDENT { 성명 : "변사또", 학년 : "2학년", 학과 : "컴퓨터공학과"})
+
+CREATE (:SUBJECT { 과목명 : "인공지능기초",  담당교수 : "김교수", 학점 : 2})
+CREATE (:SUBJECT { 과목명 : "딥러닝",  담당교수 : "박교수", 학점 : 3})
+
+
+MATCH (a{성명:'이몽룡'}) MATCH (b{성명:'성춘향'})
+CREATE (a) - [r1:교제하다{교제기간:3}] -> (b)
+CREATE (b) - [r2:교제하다{교제기간:3}] -> (a)
+RETURN a, r1, r2,  b
+
+
+MATCH (a{성명:'이몽룡'}) MATCH (b{과목명:'인공지능기초'})
+CREATE (a) -[r:수강하다] -> (b)
+RETURN a, b, r
+
+
+MATCH (a{성명:'성춘향'}) MATCH (b{과목명:'인공지능기초'})
+CREATE (a) -[r:수강하다] -> (b)
+RETURN a, b, r
+
+
+MATCH (a{성명:'변사또'}) MATCH (b{과목명:'딥러닝'})
+CREATE (a) -[r:수강하다] -> (b)
+RETURN a, b, r
+
+
+MATCH (a{성명:'변사또'}) MATCH (b{성명:'성춘향'})
+CREATE (a) -[r:괴롭히다] -> (b)
+RETURN a, b, r
+
+
+MATCH (n) RETURN n
+
+MATCH (n:STUDENT) RETURN n
+
+MATCH (n:SUBJECT { 학점 : 3 }) RETURN n
+
+MATCH (a:STUDENT) WHERE a.학년 >= '3학년' RETURN a.성명
+
+MATCH (a:STUDENT)-[:수강하다]->(b:SUBJECT{과목명:'딥러닝'})
+RETURN a.성명
+
+MATCH (a:STUDENT)-[:교제하다]->(b:STUDENT{성명:'성춘향'})
+MATCH (a) - [:수강하다] -> (d:SUBJECT)
+RETURN d.과목명
+
+
+
+====================================
+
+MATCH (n:STUDENT { 성명: '이몽룡' })
+DELETE n
